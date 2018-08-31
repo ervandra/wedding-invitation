@@ -1,0 +1,418 @@
+@charset "UTF-8";
+@keyframes blink {
+  0% {
+    opacity: 1; }
+  35% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0); }
+  30% {
+    transform: translateY(-3px); }
+  100% {
+    transform: translateY(0); } }
+
+@keyframes zoom {
+  0% {
+    transform: scale(1.05); }
+  50% {
+    transform: scale(1.15); }
+  100% {
+    transform: scale(1.05); } }
+
+@keyframes zoom2 {
+  0% {
+    transform: scale(1.15); }
+  50% {
+    transform: scale(1.3); }
+  100% {
+    transform: scale(1.15); } }
+
+body {
+  font-family: "Dosis", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: #fff;
+  -webkit-font-smoothing: antialiased; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "MrsSaint", "cursive", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: normal;
+  margin: 0 0 1rem;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); }
+
+cite,
+strong {
+  letter-spacing: 0.5px; }
+
+p,
+ul li,
+ol li {
+  line-height: 1.4; }
+
+.perspective {
+  -webkit-perspective: 600px;
+  perspective: 600px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transform-origin: 50% 50%; }
+
+.hero {
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  height: 100vh;
+  height: calc(100vh - 48px);
+  background: url(../images/bg1.jpg) no-repeat center;
+  background-size: cover; }
+  @media (min-width: 1024px) {
+    .hero {
+      height: 100vh;
+      height: calc(100vh - 80px);
+      justify-content: flex-end; } }
+  .hero h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-top: 1rem;
+    opacity: 0; }
+    @media (min-width: 1024px) {
+      .hero h1 {
+        margin-top: 26%;
+        font-size: 6rem;
+        opacity: 1; } }
+  .hero h3 {
+    font-size: 0.875rem;
+    white-space: nowrap;
+    overflow: hidden;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-family: "Dosis", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    padding: 0.5rem 0;
+    border: 1px solid #000;
+    text-align: center;
+    border-width: 1px 0;
+    margin-bottom: 125px;
+    background: rgba(255, 255, 255, 0.7); }
+    @media (min-width: 1024px) {
+      .hero h3 {
+        font-size: 2rem;
+        width: 600px;
+        margin: 0 auto 60px;
+        border-width: 2px 0;
+        background: none; } }
+  .hero .save-the-date {
+    padding-top: 6rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden; }
+    .hero .save-the-date h5 {
+      font-size: 2.25rem;
+      position: relative;
+      z-index: 5;
+      line-height: 1;
+      margin: 0;
+      color: #fff; }
+      @media (min-width: 1024px) {
+        .hero .save-the-date h5 {
+          font-size: 3.25rem; } }
+    .hero .save-the-date h2 {
+      font-family: "Dosis", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      font-size: 1.25rem;
+      position: relative;
+      z-index: 5;
+      line-height: 1;
+      margin: 0 0 0.5rem;
+      color: #fff; }
+      @media (min-width: 1024px) {
+        .hero .save-the-date h2 {
+          font-size: 2.25rem; } }
+    .hero .save-the-date:before {
+      content: '';
+      display: block;
+      width: 240px;
+      height: 240px;
+      bottom: -140px;
+      border-radius: 50%;
+      background: rgba(33, 33, 33, 0.5);
+      position: absolute;
+      margin-left: -120px;
+      left: 50%;
+      z-index: 1;
+      animation: zoom 1.5s infinite ease;
+      transform-origin: 50% 50%; }
+    .hero .save-the-date:after {
+      content: '';
+      display: block;
+      width: 240px;
+      height: 240px;
+      bottom: -140px;
+      border-radius: 50%;
+      background: rgba(33, 33, 33, 0.5);
+      position: absolute;
+      margin-left: -120px;
+      left: 50%;
+      z-index: 1; }
+    @media (min-width: 1024px) {
+      .hero .save-the-date {
+        padding: 0;
+        overflow: visible;
+        left: 10%;
+        bottom: auto;
+        top: 5rem;
+        height: 320px;
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+        .hero .save-the-date:before, .hero .save-the-date:after {
+          width: 320px;
+          height: 320px;
+          margin-left: -160px;
+          bottom: auto; } }
+
+#top {
+  background: url(../images/bg3.jpg);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  transition: all ease .3s; }
+  #top.fixed {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 30; }
+
+.navigation {
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  @media (min-width: 1024px) {
+    .navigation {
+      height: 80px; } }
+  .navigation .logo a {
+    color: #000;
+    padding-top: 12px;
+    display: block;
+    font-family: "MrsSaint", "cursive", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 1.25rem; }
+    @media (min-width: 1024px) {
+      .navigation .logo a {
+        font-size: 2.5rem; } }
+  .navigation #mainmenu ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    padding: 0; }
+    .navigation #mainmenu ul li {
+      display: block;
+      font-family: "Dosis", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      font-size: .625rem;
+      font-weight: bold;
+      text-transform: uppercase; }
+      .navigation #mainmenu ul li + li {
+        margin-left: 2rem; }
+        @media (min-width: 1024px) {
+          .navigation #mainmenu ul li + li {
+            margin-left: 3rem; } }
+      .navigation #mainmenu ul li a {
+        color: #000; }
+        .navigation #mainmenu ul li a:hover, .navigation #mainmenu ul li a:focus {
+          text-decoration: underline; }
+      @media (min-width: 1024px) {
+        .navigation #mainmenu ul li {
+          font-size: 1.125rem; } }
+
+#the-couple {
+  min-height: 100vh;
+  padding: 10% 0;
+  background: url(../images/bg2.jpg) repeat center;
+  background-size: cover; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    #the-couple {
+      padding: 3rem 0; } }
+  #the-couple .the-couple-container {
+    box-shadow: 4px 4px 12px 2px rgba(0, 0, 0, 0.3);
+    position: relative;
+    perspective: 100px; }
+    #the-couple .the-couple-container:before, #the-couple .the-couple-container:after {
+      display: block;
+      content: "❤";
+      font-size: 12rem;
+      position: absolute;
+      z-index: 10;
+      top: 50%;
+      left: 50%;
+      width: 180px;
+      height: 180px;
+      text-align: center;
+      line-height: 1;
+      color: rgba(255, 0, 0, 0.5);
+      margin-left: -90px;
+      margin-top: -90px;
+      transform-origin: 50% 50%; }
+    #the-couple .the-couple-container:before {
+      animation: zoom2 2s infinite ease-out; }
+    @media (min-width: 320px) and (max-width: 767px) {
+      #the-couple .the-couple-container:before, #the-couple .the-couple-container:after {
+        font-size: 6rem;
+        width: 90px;
+        height: 90px;
+        margin-left: -45px;
+        margin-top: -45px; } }
+  #the-couple .photo img {
+    width: 100%; }
+  #the-couple .profile {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 4rem;
+    border: 16px solid #fff;
+    background: white;
+    background: #fff url(../images/bg3.jpg) center; }
+    #the-couple .profile h3 {
+      font-size: 4rem;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+      margin: 2rem 0; }
+      #the-couple .profile h3:after {
+        display: block;
+        height: 50px;
+        margin: 1rem 0;
+        content: "";
+        background: url(../images/daon-eddie.png) no-repeat left center;
+        background-size: contain; }
+    #the-couple .profile.profile-intan {
+      text-align: right; }
+      #the-couple .profile.profile-intan h3:after {
+        background-position: right center;
+        background-image: url(../images/daon-intan.png); }
+    @media (min-width: 320px) and (max-width: 767px) {
+      #the-couple .profile {
+        padding: 2rem 0; }
+        #the-couple .profile h3 {
+          font-size: 2.5rem;
+          text-align: center; }
+          #the-couple .profile h3:after {
+            margin: 0;
+            background-position: center !important; } }
+
+#date-time {
+  padding: 5rem 0;
+  background: url(../images/bg3.jpg) repeat center;
+  text-align: center; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    #date-time {
+      padding: 3rem 0; } }
+  #date-time h2 {
+    font-size: 4rem; }
+    @media (min-width: 320px) and (max-width: 767px) {
+      #date-time h2 {
+        font-size: 2.5rem; } }
+  #date-time h4 {
+    font-family: "Dosis", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 1rem;
+    text-decoration: underline; }
+  #date-time address {
+    padding: 1rem 0;
+    font-style: normal; }
+    #date-time address h2, #date-time address h5 {
+      font-size: 1.5rem;
+      font-family: "Dosis", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      margin-bottom: .75rem;
+      font-weight: bold; }
+      @media (min-width: 320px) and (max-width: 767px) {
+        #date-time address h2, #date-time address h5 {
+          font-size: 1.25rem; } }
+      #date-time address h2 .fa, #date-time address h5 .fa {
+        margin-right: .75rem;
+        margin-bottom: 4px;
+        font-size: 2rem;
+        color: rgba(0, 0, 0, 0.3);
+        text-shadow: 1px 1px 1px #eee;
+        vertical-align: middle; }
+    #date-time address p {
+      margin-top: 2rem;
+      font-size: 1.25rem; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    #date-time img {
+      max-width: 60px; } }
+
+#happiest-couple {
+  padding: 15rem 0;
+  background: url(../images/bg5.jpg) no-repeat center;
+  background-size: cover;
+  text-align: center; }
+  #happiest-couple h3 {
+    font-size: 5rem;
+    margin: 0;
+    letter-spacing: 1px; }
+  #happiest-couple h4 {
+    line-height: .5;
+    margin: 0;
+    text-align: center;
+    font-size: 5rem; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    #happiest-couple {
+      padding: 3rem 0; }
+      #happiest-couple h3 {
+        font-size: 2.5rem; }
+      #happiest-couple h4 {
+        line-height: 1;
+        font-size: 3rem;
+        margin: 1rem 0; } }
+
+#footer {
+  padding: 1rem 0;
+  background: url(../images/bg3.jpg) repeat center; }
+  #footer h5 {
+    font-family: "Dosis", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    margin: 0;
+    margin-right: 1.5rem;
+    font-size: 1rem;
+    text-shadow: none;
+    padding-left: 70px;
+    background: url(../images/daon-bawah.png) no-repeat left center;
+    background-size: contain; }
+    @media (min-width: 320px) and (max-width: 767px) {
+      #footer h5 {
+        padding: 0;
+        margin-right: .5rem;
+        white-space: nowrap;
+        background: none; } }
+  #footer .SimpleShare {
+    display: flex; }
+    #footer .SimpleShare a {
+      display: block;
+      height: 32px;
+      margin: 0 .25rem; }
+      #footer .SimpleShare a svg {
+        width: 32px;
+        height: 32px;
+        display: block; }
+    @media (min-width: 320px) and (max-width: 767px) {
+      #footer .SimpleShare {
+        justify-content: flex-end; }
+        #footer .SimpleShare a {
+          margin: 0; } }
+
+#top.fixed + #the-couple {
+  margin-top: 80px; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    #top.fixed + #the-couple {
+      margin-top: 48px; } }
