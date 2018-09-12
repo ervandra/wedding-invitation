@@ -184,6 +184,36 @@ ol li {
           height: 320px;
           margin-left: -160px;
           bottom: auto; } }
+  .hero .the-countdown {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    text-align: center; }
+    @media (min-width: 1024px) {
+      .hero .the-countdown {
+        top: 2rem;
+        right: 2rem;
+        left: auto; } }
+    .hero .the-countdown .block {
+      color: #fff;
+      width: 60px;
+      margin: 0 .25rem;
+      box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.3);
+      border: 2px solid rgba(0, 0, 0, 0.1);
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 12px; }
+      .hero .the-countdown .block .count {
+        font-size: 2.25rem;
+        font-weight: bold;
+        line-height: 48px;
+        height: 48px; }
+      .hero .the-countdown .block .label {
+        font-size: .75rem;
+        line-height: 18px;
+        height: 18px;
+        white-space: nowrap;
+        text-transform: uppercase; }
 
 #top {
   background: url(../images/bg3.jpg);
@@ -282,12 +312,12 @@ ol li {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding: 4rem;
+    padding: 3rem;
     border: 16px solid #fff;
     background: white;
     background: #fff url(../images/bg3.jpg) center; }
     #the-couple .profile h3 {
-      font-size: 4rem;
+      font-size: 3.25rem;
       text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
       margin: 2rem 0; }
       #the-couple .profile h3:after {
@@ -335,7 +365,8 @@ ol li {
       font-size: 1.5rem;
       font-family: "Dosis", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
       margin-bottom: .75rem;
-      font-weight: bold; }
+      font-weight: bold;
+      color: #333; }
       @media (min-width: 320px) and (max-width: 767px) {
         #date-time address h2, #date-time address h5 {
           font-size: 1.25rem; } }
@@ -349,6 +380,13 @@ ol li {
     #date-time address p {
       margin-top: 2rem;
       font-size: 1.25rem; }
+      #date-time address p .fa {
+        margin-right: .75rem;
+        margin-bottom: 4px;
+        font-size: 1.5rem;
+        color: rgba(0, 0, 0, 0.3);
+        text-shadow: 1px 1px 1px #eee;
+        vertical-align: middle; }
   @media (min-width: 320px) and (max-width: 767px) {
     #date-time img {
       max-width: 60px; } }
@@ -359,7 +397,7 @@ ol li {
   background-size: cover;
   text-align: center; }
   #happiest-couple h3 {
-    font-size: 5rem;
+    font-size: 4rem;
     margin: 0;
     letter-spacing: 1px; }
   #happiest-couple h4 {
@@ -416,3 +454,21 @@ ol li {
   @media (min-width: 320px) and (max-width: 767px) {
     #top.fixed + #the-couple {
       margin-top: 48px; } }
+
+#gallery {
+  padding: 10% 0;
+  background: url(../images/bg6.jpg) no-repeat center;
+  background-size: cover; }
+
+.pswp-gallery .pswp-thumbnails {
+  display: flex;
+  flex-wrap: wrap; }
+  .pswp-gallery .pswp-thumbnails .pswp-thumbnail {
+    flex: 1;
+    padding: .125rem; }
+    @media (min-width: 320px) and (max-width: 767px) {
+      .pswp-gallery .pswp-thumbnails .pswp-thumbnail {
+        flex: auto;
+        width: 120px; } }
+    .pswp-gallery .pswp-thumbnails .pswp-thumbnail img {
+      width: 100%; }

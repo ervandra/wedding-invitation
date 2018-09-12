@@ -236,6 +236,41 @@ ol li {
 			}
 		}
 	}
+	.the-countdown {
+		position:absolute;
+		top:1rem;
+		left:1rem;
+		right:1rem;
+		text-align: center;
+
+		@include desktop {
+			top:2rem;
+			right:2rem;
+			left:auto;
+		}
+		.block {
+			color:#fff;
+			width:60px;
+			margin:0 .25rem;
+			box-shadow:0 0 2px 1px rgba(0,0,0,.3);
+			border:2px solid rgba(0,0,0,.1);
+			background: rgba(0,0,0,.6);
+			border-radius:12px;
+			.count {
+				font-size: 2.25rem;
+				font-weight: bold;
+				line-height:48px;
+				height:48px;
+			}
+			.label {
+				font-size:.75rem;
+				line-height: 18px;
+				height:18px;
+				white-space: nowrap;
+				text-transform: uppercase
+			}
+		}
+	}
 }
 
 #top {
@@ -353,12 +388,12 @@ ol li {
 		display:flex;
 		justify-content: center;
 		flex-direction: column;
-		padding:4rem;
+		padding:3rem;
 		border:16px solid #fff;
 		background:rgba(255,255,255,1);
 		background:#fff url(../images/bg3.jpg) center;
 		h3 {
-			font-size:4rem;
+			font-size:3.25rem;
 			text-shadow:1px 1px 1px rgba(0,0,0,.3);
 			margin:2rem 0;
 			&:after {
@@ -418,6 +453,7 @@ ol li {
 			font-family: $dosis;
 			margin-bottom:.75rem;
 			font-weight: bold;
+			color:#333;
 			@include mobile {
 				font-size:1.25rem;
 			}
@@ -431,6 +467,14 @@ ol li {
 			}
 		}
 		p {
+			.fa {
+				margin-right: .75rem;
+				margin-bottom:4px;
+				font-size:1.5rem;
+				color:rgba(0,0,0,.3);
+				text-shadow: 1px 1px 1px #eee;
+				vertical-align: middle;
+			}
 			margin-top:2rem;
 			font-size:1.25rem;
 		}
@@ -448,7 +492,7 @@ ol li {
 	background-size:cover;
 	text-align: center;
 	h3 {
-		font-size:5rem;
+		font-size:4rem;
 		margin:0;
 		letter-spacing: 1px;
 	}
@@ -515,6 +559,28 @@ ol li {
 		margin-top:80px;
 		@include mobile {
 			margin-top:48px;
+		}
+	}
+}
+#gallery {
+	padding:10% 0;
+	background:url(../images/bg6.jpg) no-repeat center;
+	background-size:cover;
+}
+.pswp-gallery {
+	.pswp-thumbnails {
+		display:flex;
+		flex-wrap:wrap;
+		.pswp-thumbnail {
+			flex:1;
+			padding:.125rem;
+			@include mobile {
+				flex:auto;
+				width:120px;
+			}
+			img {
+				width:100%;
+			}
 		}
 	}
 }
