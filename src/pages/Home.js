@@ -109,7 +109,7 @@ class Home extends Component {
 					<h3>We're Getting Married</h3>
 					<div className="save-the-date">
 						<h5>Save the Date</h5>
-						<h2>AUG 28, 2018</h2>
+						<h2>Oct 4, 2018</h2>
 					</div>
 					<div className="the-countdown">
 						<div className="flex-container align-center" id="countdown">
