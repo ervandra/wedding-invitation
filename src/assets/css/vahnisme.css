@@ -464,8 +464,8 @@ ol li {
   display: flex;
   flex-wrap: wrap; }
   .pswp-gallery .pswp-thumbnails .pswp-thumbnail {
-    flex: 1;
-    padding: .125rem; }
+    padding: .5rem;
+    flex: 1 1 33.3333%; }
     @media (min-width: 320px) and (max-width: 767px) {
       .pswp-gallery .pswp-thumbnails .pswp-thumbnail {
         flex: auto;

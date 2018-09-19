@@ -5,10 +5,12 @@
   "description": "Wedding Invitation for Eddie Zhuo",
   "author": "Ervandra Halim",
   "dependencies": {
+    "axios": "^0.18.0",
     "node-sass-chokidar": "^1.3.3",
     "npm-run-all": "^4.1.3",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "react-howler": "^3.7.3",
     "react-photoswipe": "^1.3.0",
     "react-scripts": "1.1.5",
     "react-simple-share": "^0.1.2"

@@ -1,8 +1,8 @@
 {
-  "main.css": "static/css/main.b8696dc3.css",
-  "main.css.map": "static/css/main.b8696dc3.css.map",
-  "main.js": "static/js/main.008f7b01.js",
-  "main.js.map": "static/js/main.008f7b01.js.map",
+  "main.css": "static/css/main.036ccc7c.css",
+  "main.css.map": "static/css/main.036ccc7c.css.map",
+  "main.js": "static/js/main.555ef09c.js",
+  "main.js.map": "static/js/main.555ef09c.js.map",
   "static/media/Dosis.eot": "static/media/Dosis.30d7bc4d.eot",
   "static/media/Dosis.svg": "static/media/Dosis.946a429c.svg",
   "static/media/Dosis.ttf": "static/media/Dosis.f8904192.ttf",
@@ -29,5 +29,6 @@
   "static/media/fontawesome-webfont.woff2?v=4.7.0": "static/media/fontawesome-webfont.af7ae505.woff2",
   "static/media/fontawesome-webfont.woff?v=4.7.0": "static/media/fontawesome-webfont.fee66e71.woff",
   "static/media/gelas.svg": "static/media/gelas.f4fffa45.svg",
-  "static/media/intan.jpg": "static/media/intan.ffb118c9.jpg"
+  "static/media/intan.jpg": "static/media/intan.ffb118c9.jpg",
+  "static/media/song.mp3": "static/media/song.cbbe7e6b.mp3"
 }

@@ -572,8 +572,9 @@ ol li {
 		display:flex;
 		flex-wrap:wrap;
 		.pswp-thumbnail {
-			flex:1;
-			padding:.125rem;
+			padding:.5rem;
+			flex: 1 1 33.3333%;
+			
 			@include mobile {
 				flex:auto;
 				width:120px;

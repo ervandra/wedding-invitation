@@ -1,62 +1,20 @@
 import React, { Component } from 'react';
 import { SimpleShareButtons } from 'react-simple-share';
+import ReactHowler from 'react-howler';
+import gallery from '../gallery.json'
 
 import fotoEddie from '../assets/images/eddie.jpg';
 import fotoIntan from '../assets/images/intan.jpg';
 import fotoGelas from '../assets/images/gelas.svg';
+import song from '../assets/media/song.mp3';
 
 import 'react-photoswipe/lib/photoswipe.css';
 
 import { PhotoSwipeGallery } from 'react-photoswipe';
 
-let items = [
-	{
-		src: 'https://via.placeholder.com/1200x900',
-		thumbnail: 'https://via.placeholder.com/120x90',
-		w: 1200,
-		h: 900,
-		title: 'Image 1',
-	},
-	{
-		src: 'https://via.placeholder.com/1200x900',
-		thumbnail: 'https://via.placeholder.com/120x90',
-		w: 1200,
-		h: 900,
-		title: 'Image 2',
-	},
-	{
-		src: 'https://via.placeholder.com/1200x900',
-		thumbnail: 'https://via.placeholder.com/120x90',
-		w: 1200,
-		h: 900,
-		title: 'Image 2',
-	},
-	{
-		src: 'https://via.placeholder.com/1200x900',
-		thumbnail: 'https://via.placeholder.com/120x90',
-		w: 1200,
-		h: 900,
-		title: 'Image 2',
-	},
-	{
-		src: 'https://via.placeholder.com/1200x900',
-		thumbnail: 'https://via.placeholder.com/120x90',
-		w: 1200,
-		h: 900,
-		title: 'Image 2',
-	},
-	{
-		src: 'https://via.placeholder.com/1200x900',
-		thumbnail: 'https://via.placeholder.com/120x90',
-		w: 1200,
-		h: 900,
-		title: 'Image 2',
-	},
-];
+let items = gallery;
 
-let options = {
-	//http://photoswipe.com/documentation/options.html
-};
+let options = {};
 
 class Home extends Component {
 	constructor(props) {
@@ -64,10 +22,13 @@ class Home extends Component {
 		this.state = {
 			scrolling: false,
 			items: items,
+			gallery: [],
+			isLoading: true
 		};
 		this.handleScroll = this.handleScroll.bind(this);
+		this.getThumbnailContent = this.getThumbnailContent.bind(this);
 	}
-	
+
 	componentDidMount() {
 		this.handleScroll;
 		window.addEventListener('scroll', this.handleScroll);
@@ -83,8 +44,11 @@ class Home extends Component {
 			this.setState({ scrolling: true });
 		}
 	}
-	getTick() {
-
+	
+	getThumbnailContent = (item) => {
+		return (
+			<img src={item.thumbnail} width={120} height={90}/>
+		);
 	}
 
 	render() {
@@ -96,7 +60,6 @@ class Home extends Component {
   		var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   		var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 			var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-			// document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 			document.getElementById('day').innerHTML = days;
 			document.getElementById('hour').innerHTML = hours;
 			document.getElementById('minute').innerHTML = minutes;
@@ -188,48 +151,11 @@ class Home extends Component {
 						</div>
 					</div>
 				</div>
-				{/* <div className="section" id="just-say-yes">
-					<div className="grid-container">
-						<div className="grid-x align-middle">
-							<div className="cell small-12 medium-6">
-								<h4>We'll say yes in...</h4>
-							</div>
-							<div className="cell small-12 medium-6">
-								<div className="countdown">
-									<div className="count day">
-										<span className="num" id="num-day">
-											18
-										</span>
-										<span className="text">Days</span>
-									</div>
-									<div className="count hour">
-										<span className="num" id="num-hour">
-											18
-										</span>
-										<span className="text">Hours</span>
-									</div>
-									<div className="count minute">
-										<span className="num" id="num-minute">
-											18
-										</span>
-										<span className="text">Minutes</span>
-									</div>
-									<div className="count second">
-										<span className="num" id="num-second">
-											18
-										</span>
-										<span className="text">Seconds</span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div> */}
 				<div className="section" id="gallery">
 					<div className="grid-container">
 						<div className="grid-x grid-margin-x">
 							<div className="cell">
-								<PhotoSwipeGallery items={items} options={options} />
+								<PhotoSwipeGallery items={items} options={options} thumbnailContent={this.getThumbnailContent}/>
 							</div>
 						</div>
 					</div>
@@ -321,6 +247,12 @@ class Home extends Component {
 						</div>
 					</div>
 				</footer>
+				<ReactHowler
+					src={song}
+					playing={true}
+					loop={true}
+					ref={(ref) => (this.player = ref)}
+				/>
 			</div>
 		);
 	}
