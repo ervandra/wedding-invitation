@@ -347,40 +347,15 @@ ol li {
 	.the-couple-container {
 		box-shadow:4px 4px 12px 2px rgba(0,0,0,.3);
 		position: relative;
-		perspective: 100px;
-		&:before, &:after {
-			display:block;
-			content:"❤";
-			font-size:12rem;
-			position:absolute;
-			z-index: 10;
-			top:50%;
-			left:50%;
-			width:180px;
-			height:180px;
-			text-align: center;
-			line-height:1;
-			color:rgba(255,0,0,.5);
-			margin-left:-90px;
-			margin-top:-90px;
-			transform-origin:50% 50%;
-		}
-		&:before {
-			animation:zoom2 2s infinite ease-out;
-		}
-		@include mobile {
-			&:before, &:after {
-				font-size:6rem;
-				width:90px;
-				height:90px;
-				margin-left:-45px;
-				margin-top:-45px;
-			}
-		}
 	}
 	.photo {
+		height:100%;
 		img {
 			width:100%;
+			@include tablet {
+				height:100%;
+				object-fit: cover;
+			}
 		}
 	}
 	.profile {
@@ -563,21 +538,23 @@ ol li {
 	}
 }
 #gallery {
-	padding:10% 0;
+	padding:10% 1rem;
 	background:url(../images/bg6.jpg) no-repeat center;
 	background-size:cover;
+	@include mobile {
+		padding:10% 1rem;
+	}
 }
 .pswp-gallery {
 	.pswp-thumbnails {
 		display:flex;
 		flex-wrap:wrap;
 		.pswp-thumbnail {
-			padding:.5rem;
-			flex: 1 1 33.3333%;
+			padding:1rem;
+			flex: 1 1 50%;
 			
 			@include mobile {
 				flex:auto;
-				width:120px;
 			}
 			img {
 				width:100%;

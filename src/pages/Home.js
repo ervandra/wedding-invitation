@@ -6,7 +6,6 @@ import gallery from '../gallery.json'
 import fotoEddie from '../assets/images/eddie.jpg';
 import fotoIntan from '../assets/images/intan.jpg';
 import fotoGelas from '../assets/images/gelas.svg';
-import song from '../assets/media/song.mp3';
 
 import 'react-photoswipe/lib/photoswipe.css';
 
@@ -152,13 +151,9 @@ class Home extends Component {
 					</div>
 				</div>
 				<div className="section" id="gallery">
-					<div className="grid-container">
-						<div className="grid-x grid-margin-x">
-							<div className="cell">
+					
 								<PhotoSwipeGallery items={items} options={options} thumbnailContent={this.getThumbnailContent}/>
-							</div>
-						</div>
-					</div>
+							
 				</div>
 				<div className="section" id="date-time">
 					<div className="grid-container">
@@ -248,7 +243,7 @@ class Home extends Component {
 					</div>
 				</footer>
 				<ReactHowler
-					src={song}
+					src="http://edyintan.com/medias/song.mp3"
 					playing={true}
 					loop={true}
 					ref={(ref) => (this.player = ref)}
