@@ -322,12 +322,12 @@ ol li {
             background-position: center !important; } }
 
 #date-time {
-  padding: 5rem 0;
+  padding: 10% 0;
   background: url(../images/bg3.jpg) repeat center;
   text-align: center; }
   @media (min-width: 320px) and (max-width: 767px) {
     #date-time {
-      padding: 3rem 0; } }
+      padding: 10% 0; } }
   #date-time h2 {
     font-size: 4rem; }
     @media (min-width: 320px) and (max-width: 767px) {
