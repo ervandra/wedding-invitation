@@ -243,7 +243,7 @@ class Home extends Component {
 					</div>
 				</footer>
 				<ReactHowler
-					src="http://edyintan.com/medias/song.mp3"
+					src="https://edyintan.com/medias/song.mp3"
 					playing={true}
 					loop={true}
 					ref={(ref) => (this.player = ref)}
