@@ -213,7 +213,9 @@ class Home extends Component {
 					<div className="grid-container">
 						<div className="grid-x">
 							<div className="cell">
-								<div className="grid-x">
+								<h4><span className="fa fa-quote-left"></span>Our happiness will be more complete with your presence and prayer in this celebration of love.<span className="fa fa-quote-right"></span></h4>
+								<h3>Edy & Intan</h3>
+								{/* <div className="grid-x">
 									<div className="cell small-12 medium-6 h3-eddie">
 										<h3>Edy Syahputra, S.Kom.</h3>
 									</div>
@@ -223,7 +225,7 @@ class Home extends Component {
 									<div className="cell small-12 medium-6 h3-intan medium-offset-6">
 										<h3>Intan Pelangi, SH.</h3>
 									</div>
-								</div>
+								</div> */}
 							</div>
 						</div>
 					</div>

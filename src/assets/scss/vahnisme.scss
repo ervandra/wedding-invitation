@@ -472,10 +472,22 @@ ol li {
 		letter-spacing: 1px;
 	}
 	h4 {
-		line-height: .5;
-		margin:0;
+		font-family: $dosis;
+		line-height:1.6;
+		margin:0 0 3rem;
 		text-align: center;
-		font-size:5rem;
+		font-size:2.25rem;
+		.fa {
+			display:none;
+			color:#999;
+			text-shadow:none;
+		}
+		.fa-quote-left {
+			margin-right:1rem
+		}
+		.fa-quote-right {
+			margin-left:1rem
+		}
 	}
 	@include mobile {
 		padding:3rem 0;
