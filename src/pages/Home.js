@@ -182,7 +182,7 @@ class Home extends Component {
 											<span className="fa fa-map-marker" />
 											Jl. Petai No. 56 <br/>Pasar 2 Tionghoa <br/>Tandam
 										</p>
-										<p><a href="https://www.google.com/maps/@3.6651926,98.5042307,18z?hl=en" rel="noopener noreferrer" className="button hollow">Peta Lokasi</a></p>
+										<p><a href="https://www.google.com/maps/@3.6651926,98.5042307,18z?hl=en" target="_blank" rel="noopener noreferrer" className="button hollow">Peta Lokasi</a></p>
 									</address>
 								</div>
 							</div>
