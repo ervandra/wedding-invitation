@@ -182,7 +182,7 @@ class Home extends Component {
 											<span className="fa fa-map-marker" />
 											Jl. Petai No. 56 <br/>Pasar 2 Tionghoa <br/>Tandam
 										</p>
-										<p><a href="https://www.google.com/maps/dir//3.6652285,98.504158/@3.665165,98.5037488,254m/data=!3m1!1e3?hl=en" target="_blank" rel="noopener noreferrer" className="button hollow">Get direction</a></p>
+										<p><a href="https://www.google.com/maps/@3.6651926,98.5042307,20z?hl=en" rel="noopener noreferrer" className="button hollow">Get direction</a></p>
 									</address>
 								</div>
 							</div>
@@ -202,7 +202,7 @@ class Home extends Component {
 											<span className="fa fa-map-marker" />
 											Gedung Garuda Mas <br/>Pasar 5 Tionghoa <br/>Tandam
 										</p>
-										<p><a href="https://www.google.com/maps/dir//Gedung+Garuda+Mas,+Jalan+Pasar+V+Barat,+Bulu+Cina,+Hamparan+Perak,+Kabupaten+Deli+Serdang,+Sumatera+Utara+20374/@3.7504366,98.5331932,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x3036d451a49efad5:0x65d02a17c3526359!2m2!1d98.5353819!2d3.7504366!3e0" target="_blank" rel="noopener noreferrer" className="button hollow">Get direction</a></p>
+										<p><a href="https://www.google.com/maps/@3.686997,98.505883,20z?hl=en" target="_blank" rel="noopener noreferrer" className="button hollow">Get direction</a></p>
 									</address>
 								</div>
 							</div>

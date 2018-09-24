@@ -477,6 +477,7 @@ ol li {
 		margin:0 0 3rem;
 		text-align: center;
 		font-size:1.25rem;
+		
 		@include desktop {
 			font-size:2.25rem;
 		}
@@ -498,9 +499,7 @@ ol li {
 			font-size:2.5rem;
 		}
 		h4 {
-			line-height: 1;
-			font-size:3rem;
-			margin:1rem 0;
+			margin:1rem 0 3rem;
 		}
 	}
 }
