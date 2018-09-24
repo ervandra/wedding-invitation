@@ -384,7 +384,10 @@ ol li {
     line-height: 1.6;
     margin: 0 0 3rem;
     text-align: center;
-    font-size: 2.25rem; }
+    font-size: 1.25rem; }
+    @media (min-width: 1024px) {
+      #happiest-couple h4 {
+        font-size: 2.25rem; } }
     #happiest-couple h4 .fa {
       display: none;
       color: #999;

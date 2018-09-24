@@ -476,7 +476,10 @@ ol li {
 		line-height:1.6;
 		margin:0 0 3rem;
 		text-align: center;
-		font-size:2.25rem;
+		font-size:1.25rem;
+		@include desktop {
+			font-size:2.25rem;
+		}
 		.fa {
 			display:none;
 			color:#999;
